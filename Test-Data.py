@@ -152,17 +152,17 @@ key_df = df_data.rdd.keyBy(lambda x: (x[5],x[4],x[3],x[15],x[18]))
 # using boolean, columns and fraction as arguments 
 training_sample = key_df.sampleByKey(False,
 fractions1).map(lambda x:
-				x[1]).toDF(normalized.columns)
+				x[1]).toDF(standardized.columns)
 
 # Again extract random sample through sampleByKey function 
 # using boolean, columns and fraction as arguments 
 testing_sample = key_df.sampleByKey(False,
 fractions2).map(lambda x:
-				x[1]).toDF(normalized.columns)
+				x[1]).toDF(standardized.columns)
 
 validation_sample = key_df.sampleByKey(False,
 fractions3).map(lambda x:
-				x[1]).toDF(normalized.columns)
+				x[1]).toDF(standardized.columns)
 
 # COMMAND ----------
 
