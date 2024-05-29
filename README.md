@@ -37,4 +37,4 @@ Exception Handling: If the job fails with exceptions we can have retry mechanism
 Steps to run:
 1. Download the notebook
 2. Import it in your environment
-3. Click on run and grab a cup of coffe, it will be completed before you finish your coffe :)
+3. Click on run and grab a cup of coffee, it will be completed before you finish your coffee :)
