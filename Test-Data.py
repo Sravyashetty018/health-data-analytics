@@ -17,7 +17,7 @@ df.select("year","region").groupBy("year","region").count().show()
 
 # COMMAND ----------
 
-# DBTITLE 1,Doing the initial transformation for storing in bronze layer
+# DBTITLE 1,Doing the initial transformation for storing in bronze layer, Check for the code
 from pyspark.sql.functions import when,lit,col
 transformed = df.withColumn(
     "GENDER",when(df.GENDER == 1, 'Male').when(df.GENDER == 2, 'Female').otherwise('Missing/unknown/not collected/invalid')).withColumn(
